@@ -2,6 +2,12 @@
 * Pattern-1: Rectangular Star Pattern
 */
 
+// * * * * *
+// * * * * *
+// * * * * *
+// * * * * *
+// * * * * *
+
 class Solution {
     printPattern(n) {
         for (let i = 1; i <= n; i++) {

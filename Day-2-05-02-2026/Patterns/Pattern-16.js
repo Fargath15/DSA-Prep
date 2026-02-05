@@ -1,20 +1,26 @@
 /*
-* Pattern-5: Inverted Right Pyramid
+* Pattern - 16: Alpha-Ramp Pattern
 */
 
-// *****
-// ****
-// ***
-// **
-// *
+// A
+// B B
+// C C C
+// D D D D
+// E E E E E
 
 class Solution {
     printPattern(n) {
-        for (let i = n; i >= 1; i--) {
+
+        for (let i = 0; i < n; i++) {
+            let val = 65;
+
             let rows = "";
-            for (let j = i; j >= 1; j--) {
-                rows += "*";
+
+            val += i;
+            for (let j = 0; j <= i; j++) {
+                rows += String.fromCharCode(val) + " ";
             }
+
             console.log(rows);
         }
     }

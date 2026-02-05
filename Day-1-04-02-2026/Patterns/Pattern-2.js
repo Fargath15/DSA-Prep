@@ -2,6 +2,12 @@
 * Pattern-2: Right-Angled Triangle Pattern
 */
 
+// *
+// * *
+// * * *
+// * * * *
+// * * * * *
+
 class Solution {
     printPattern(n) {
         for(let i=1; i<=n; i++) {

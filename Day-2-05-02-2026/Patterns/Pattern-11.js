@@ -1,20 +1,26 @@
 /*
-* Pattern-5: Inverted Right Pyramid
+* Pattern - 11: Binary Number Triangle Pattern
 */
 
-// *****
-// ****
-// ***
-// **
-// *
+// 1
+// 0 1
+// 0 1 0
+// 1 0 1 0
+// 1 0 1 0 1
 
 class Solution {
     printPattern(n) {
-        for (let i = n; i >= 1; i--) {
+
+        let val = 0;
+        for (let i = 0; i < n; i++) {
+
             let rows = "";
-            for (let j = i; j >= 1; j--) {
-                rows += "*";
+
+            for (let j = 0; j <= i; j++) {
+                val = 1 - val
+                rows += `${val} `;
             }
+
             console.log(rows);
         }
     }

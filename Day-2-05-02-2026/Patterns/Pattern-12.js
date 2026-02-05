@@ -1,20 +1,32 @@
 /*
-* Pattern - 3: Right-Angled Number Pyramid
+* Pattern - 12: Number Crown Pattern
 */
 
-// 1
-// 1 2
-// 1 2 3
-// 1 2 3 4
-// 1 2 3 4 5
+// 1                 1
+// 1 2             2 1
+// 1 2 3         3 2 1
+// 1 2 3 4     4 3 2 1
+// 1 2 3 4 5 5 4 3 2 1
 
 class Solution {
     printPattern(n) {
+
         for (let i = 1; i <= n; i++) {
+
             let rows = "";
+
             for (let j = 1; j <= i; j++) {
-                rows += j + " ";
+                rows += `${j} `;
             }
+
+            for (let j = 0; j < 2 * n - 2 * i; j++) {
+                rows += "  ";
+            }
+
+            for (let j = i; j >= 1 ; j--) {
+                rows += `${j} `;
+            }
+
             console.log(rows);
         }
     }

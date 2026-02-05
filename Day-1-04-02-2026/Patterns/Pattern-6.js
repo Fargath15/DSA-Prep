@@ -2,12 +2,18 @@
 * Pattern - 6: Inverted Numbered Right Pyramid
 */
 
+// 1 2 3 4 5
+// 1 2 3 4
+// 1 2 3
+// 1 2
+// 1
+
 class Solution {
     printPattern(n) {
         for (let i = n; i >= 1; i--) {
             let rows = "";
             for (let j = 1; j <= i; j++) {
-                rows += j;
+                rows += j + " ";
             }
             console.log(rows);
         }

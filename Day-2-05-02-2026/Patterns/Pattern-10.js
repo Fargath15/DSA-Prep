@@ -1,29 +1,33 @@
 /*
-* Pattern - 7: Star Pyramid
+* Pattern - 10: Half Diamond Star Pattern
 */
 
-//     *
-//    ***
-//   *****
-//  *******
-// *********
+//   *  
+//   **
+//   ***
+//   **
+//   *
 
 class Solution {
     printPattern(n) {
+
         for (let i = 0; i < n; i++) {
             let rows = "";
-            
-            for (let j = 0; j < n - i -1; j++) {
-                rows += " ";
-            }
 
-            for (let j = 0; j < 2 * i + 1; j++) {
+            for (let j = 0; j <= i; j++) {
                 rows += "*";
             }
 
-            for (let j = 0; j < n - i -1; j++) {
-                rows += " ";
+            console.log(rows);
+        }
+
+        for(let i = n-1; i > 0; i--) {
+            let rows = "";
+
+            for (let j = i; j > 0; j--) {
+                rows += "*";
             }
+
             console.log(rows);
         }
     }

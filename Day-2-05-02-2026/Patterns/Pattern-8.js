@@ -1,27 +1,27 @@
 /*
-* Pattern - 7: Star Pyramid
+* Pattern - 8: Inverted Star Pyramid
 */
 
-//     *
-//    ***
-//   *****
-//  *******
 // *********
+//  *******
+//   *****
+//    ***
+//     *
 
 class Solution {
     printPattern(n) {
-        for (let i = 0; i < n; i++) {
+        for (let i = n; i > 0; i--) {
             let rows = "";
             
-            for (let j = 0; j < n - i -1; j++) {
+            for (let j = n - i; j > 0; j--) {
                 rows += " ";
             }
 
-            for (let j = 0; j < 2 * i + 1; j++) {
+            for (let j = 2 * i - 1; j > 0; j--) {
                 rows += "*";
             }
 
-            for (let j = 0; j < n - i -1; j++) {
+            for (let j = n - i; j > 0; j--) {
                 rows += " ";
             }
             console.log(rows);

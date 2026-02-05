@@ -2,12 +2,18 @@
 * Pattern - 4: Right-Angled Number Pyramid - II
 */
 
+// 1
+// 2 2
+// 3 3 3
+// 4 4 4 4
+// 5 5 5 5 5
+
 class Solution {
     printPattern(n) {
         for (let i = 1; i <= n; i++) {
             let rows = "";
             for (let j = 1; j <= i; j++) {
-                rows += i;
+                rows += i + " ";
             }
             console.log(rows);
         }

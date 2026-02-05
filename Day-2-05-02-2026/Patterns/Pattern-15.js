@@ -1,20 +1,25 @@
 /*
-* Pattern-5: Inverted Right Pyramid
+* Pattern-15: Reverse Letter Triangle Pattern
 */
 
-// *****
-// ****
-// ***
-// **
-// *
+// A B C D E
+// A B C D
+// A B C
+// A B
+// A
 
 class Solution {
     printPattern(n) {
+
         for (let i = n; i >= 1; i--) {
+            let val = 65;
+
             let rows = "";
-            for (let j = i; j >= 1; j--) {
-                rows += "*";
+
+            for (let j = 1; j <= i; j++) {
+                rows += String.fromCharCode(val++) + " ";
             }
+
             console.log(rows);
         }
     }

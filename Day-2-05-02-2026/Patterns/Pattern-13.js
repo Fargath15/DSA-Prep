@@ -1,20 +1,25 @@
 /*
-* Pattern-5: Inverted Right Pyramid
+* Pattern - 13: Increasing Number Triangle Pattern
 */
 
-// *****
-// ****
-// ***
-// **
-// *
+// 1
+// 2 3
+// 4 5 6 
+// 7 8 9 10 
+// 11 12 13 14 15
 
 class Solution {
     printPattern(n) {
-        for (let i = n; i >= 1; i--) {
+
+        let val = "";
+        for (let i = 1; i <= n; i++) {
+
             let rows = "";
-            for (let j = i; j >= 1; j--) {
-                rows += "*";
+
+            for (let j = 1; j <= i; j++) {
+                rows += ++val + " ";
             }
+
             console.log(rows);
         }
     }
