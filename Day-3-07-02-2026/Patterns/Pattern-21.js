@@ -1,34 +1,23 @@
 /*
-* Pattern - 10: Half Diamond Star Pattern
+* Pattern - 21: Hollow Rectangle Pattern
 */
 
-// *
-// **
-// ***
-// ****
-// *****
-// ****
-// ***
-// *
+// * * * * *
+// *       * 
+// *       *
+// *       *
+// * * * * *
 
 class Solution {
     printPattern(n) {
 
         for (let i = 0; i < n; i++) {
+            
             let rows = "";
-
-            for (let j = 0; j <= i; j++) {
-                rows += "*";
-            }
-
-            console.log(rows);
-        }
-
-        for(let i = n-1; i > 0; i--) {
-            let rows = "";
-
-            for (let j = i; j > 0; j--) {
-                rows += "*";
+            
+            for (let j = 0; j < n; j++) {
+                if(i === 0 || j === 0 || i === n - 1 || j === n - 1) rows += "* ";
+                else rows += "  ";
             }
 
             console.log(rows);
